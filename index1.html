@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <title>Drum Kit</title>
+    <link rel="stylesheet" href="static files/main.css">
+</head>
+<body>
+   
+
+    
+    <div  class='container'>
+        <audio  id ="sound_G">
+            <source src="static files/boom.wav" type="audio/ogg">        
+            Your browser does not support the audio element.
+        </audio>  
+        <audio  id ="sound_A">
+            <source src="static files/clap.wav" type="audio/ogg">        
+            Your browser does not support the audio element.
+        </audio>
+        <audio  id ="sound_S">
+            <source src="static files/hihat.wav" type="audio/ogg">        
+            Your browser does not support the audio element.
+        </audio>
+        <audio  id ="sound_D">
+            <source src="static files/kick.wav" type="audio/ogg">        
+            Your browser does not support the audio element.
+        </audio>
+        <audio  id ="sound_F">
+            <source src="static files/openhat.wav" type="audio/ogg">        
+            Your browser does not support the audio element.
+        </audio>
+        <audio  id ="sound_H">
+            <source src="static files/ride.wav" type="audio/ogg">        
+            Your browser does not support the audio element.
+        </audio>
+        <audio  id ="sound_J">
+            <source src="static files/snare.wav" type="audio/ogg">        
+            Your browser does not support the audio element.
+        </audio>
+        <audio  id ="sound_L">
+            <source src="static files/tink.wav" type="audio/ogg">        
+            Your browser does not support the audio element.
+        </audio>  
+        <audio  id ="sound_K">
+            <source src="static files/tom.wav" type="audio/ogg">        
+            Your browser does not support the audio element.
+        </audio>    
+    </div>
+    <div id="key_container" class="keycontainer">
+        
+            <video autoplay muted loop class="myVideo">
+                <source src="static files/tommy.mp4" type="video/mp4">
+              </video>
+           
+        
+            <h1 class='mytop'>WELCOME TO DRUM KIT </h1>
+            <div class='inner'>
+            <button  id='buttona' onclick="playmusic('A')" type="button">A</button>
+            
+            <button  id='buttons' onclick="playmusic('S')" type="button">S</button>
+            
+            <button  id='buttond' onclick="playmusic('D')" type="button">D</button>
+           
+            <button  id='buttonf' onclick="playmusic('F')" type="button">F</button>
+           
+            <button  id='buttong' onclick="playmusic('G')" type="button">G</button>
+           
+            <button  id='buttonh' onclick="playmusic('H')" type="button">H</button>
+            
+            <button  id='buttonj' onclick="playmusic('J')" type="button">J</button>
+           
+            <button  id='buttonk' onclick="playmusic('K')" type="button">K</button>
+            
+            <button  id='buttonl' onclick="playmusic('L')" type="button">L</button>
+           
+            </div>
+            <div class='inner2'>
+            <span>Clap</span>
+            <span>HIHAT</span>
+            <span>KICK</span>
+            <span>OPENHAT</span>
+            <span>BOOM</span>
+            <span>RIDE</span>
+            <span>SNARE</span>
+            <span>TOM</span>
+            <span>TINK</span>
+
+            </div>
+
+            
+        
+        
+
+
+    </div>
+    
+    <script>
+        //console.log("hello");
+        function playmusic(key)
+        { 
+            var sound_key='sound_'+key;
+           // alert(sound_key)
+
+            document.getElementById(sound_key).play();
+           // alert( document.getElementById("sound").play())
+        };
+        // this fn register the keys of keyboard with the html document
+        
+        var musicOn=false
+        function doc_keyUp(e) { 
+            var sound_key='sound_';
+            
+           
+            if (e.keyCode == 65) {                
+              //  alert("hello");
+                sound_key+='A'
+                musicOn=true;
+                document.getElementById('buttona').style.background="yellow";
+                 //document.getElementById('buttona').style.color=
+                document.getElementById(sound_key).play();
+                
+               
+                
+
+
+            }
+            else if (e.keyCode == 65) {
+                sound_key+='A'
+                musicOn=true;
+                document.getElementById(sound_key).play();
+                
+            }
+            else if (e.keyCode == 83) {
+                sound_key+='S'
+                musicOn=true;
+                document.getElementById(sound_key).play(); 
+            }
+            else if (e.keyCode == 68) {
+                sound_key+='D'
+                musicOn=true;
+                document.getElementById(sound_key).play();
+            }
+            else if (e.keyCode == 70) {
+                sound_key+='F'
+                musicOn=true;
+                document.getElementById(sound_key).play();
+            }
+            else if (e.keyCode == 71) {
+                sound_key+='G'
+                musicOn=true;
+                document.getElementById(sound_key).play();
+            }
+            else if (e.keyCode == 72) {
+                sound_key+='H'
+                musicOn=true;
+                document.getElementById(sound_key).play();
+            }
+            else if (e.keyCode == 74) {
+                sound_key+='J'
+                musicOn=true;
+                document.getElementById(sound_key).play();
+            }
+            else if (e.keyCode == 75) {
+                sound_key+='K'
+                musicOn=true;
+                document.getElementById(sound_key).play();
+            }
+            else if (e.keyCode == 76) {
+                sound_key+='L'
+                musicOn=true;
+                document.getElementById(sound_key).play();
+            }
+        }
+        // register the handler 
+        document.addEventListener('keyup', doc_keyUp, false);
+
+        
+       
+       
+    </script>
+
+</body>
+</html>

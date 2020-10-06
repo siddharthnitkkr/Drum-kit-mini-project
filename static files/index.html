@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <title>Drum Kit</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+   
+
+    
+    <div  class='container'>
+        <audio  id ="sound_G">
+            <source src="boom.wav" type="audio/ogg">        
+            Your browser does not support the audio element.
+        </audio>  
+        <audio  id ="sound_A">
+            <source src="clap.wav" type="audio/ogg">        
+            Your browser does not support the audio element.
+        </audio>
+        <audio  id ="sound_S">
+            <source src="hihat.wav" type="audio/ogg">        
+            Your browser does not support the audio element.
+        </audio>
+        <audio  id ="sound_D">
+            <source src="kick.wav" type="audio/ogg">        
+            Your browser does not support the audio element.
+        </audio>
+        <audio  id ="sound_F">
+            <source src="openhat.wav" type="audio/ogg">        
+            Your browser does not support the audio element.
+        </audio>
+        <audio  id ="sound_H">
+            <source src="ride.wav" type="audio/ogg">        
+            Your browser does not support the audio element.
+        </audio>
+        <audio  id ="sound_J">
+            <source src="snare.wav" type="audio/ogg">        
+            Your browser does not support the audio element.
+        </audio>
+        <audio  id ="sound_L">
+            <source src="tink.wav" type="audio/ogg">        
+            Your browser does not support the audio element.
+        </audio>  
+        <audio  id ="sound_K">
+            <source src="tom.wav" type="audio/ogg">        
+            Your browser does not support the audio element.
+        </audio>    
+    </div>
+    <div id="key_container" class="keycontainer">
+        
+            <video autoplay muted loop class="myVideo">
+                <source src="tommy.mp4" type="video/mp4">
+              </video>
+           
+        
+            <h1 class='mytop'>WELCOME TO DRUM KIT </h1>
+            <div class='inner'>
+            <button  id='button' onclick="playmusic('A')" type="button">A</button>
+            
+            <button  id='button' onclick="playmusic('S')" type="button">S</button>
+            
+            <button  id='button' onclick="playmusic('D')" type="button">D</button>
+           
+            <button  id='button' onclick="playmusic('F')" type="button">F</button>
+           
+            <button  id='button' onclick="playmusic('G')" type="button">G</button>
+           
+            <button  id='button' onclick="playmusic('H')" type="button">H</button>
+            
+            <button  id='button' onclick="playmusic('J')" type="button">J</button>
+           
+            <button  id='button' onclick="playmusic('K')" type="button">K</button>
+            
+            <button  id='button' onclick="playmusic('L')" type="button">L</button>
+           
+            </div>
+            <div class='inner2'>
+            <span>Clap</span>
+            <span>HIHAT</span>
+            <span>KICK</span>
+            <span>OPENHAT</span>
+            <span>BOOM</span>
+            <span>RIDE</span>
+            <span>SNARE</span>
+            <span>TOM</span>
+            <span>TINK</span>
+
+            </div>
+
+            
+        
+        
+
+
+    </div>
+    
+    <script>
+        //console.log("hello");
+        function playmusic(key)
+        { 
+            var sound_key='sound_'+key;
+           // alert(sound_key)
+
+            document.getElementById(sound_key).play();
+           // alert( document.getElementById("sound").play())
+        };
+        
+       
+       
+    </script>
+
+</body>
+</html>
